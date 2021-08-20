@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Exam || Users >> Posts >> Comments </title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+<body>
+    <main class="main">
+        <div class="container">
+            <div class="users__div ">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <h1 class="users__heading text-secondary text-success text-center mt-3">Users</h1>
+                        
+                        <ul class="users__list list-style-none p-0 m-0">
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <h1 class="posts__heading text-secondary text-success text-center mt-3">Posts</h1>
+                        <ul class="posts__list list-style-none p-0 m-0">
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <h1 class="comments__heading text-secondary text-success text-center mt-3">Comments</h1>
+                        <ul class="comments__list list-style-none p-0 m-0">
+                        </ul>
+                    </div>
+
+                  </div>
+            </div>
+        </div>
+    </main>
+    
+    <template id="users__template">
+        <li class="users__item d-flex flex-wrap border border-3 border-top-0 rounded-3 justify-content-center py-2 px-2 mx-2 my-3 mb-5 ">
+
+            <p class="users__id text-primary fs-3 text-center fw-bold bg-white border border-1 border-top-0 d-inline-block col-8 px-4 py-2">1</p>
+            <h3 class="users__name col-12 text-truncate text-dark text-center">Name Surname</h3>
+            <p class="users__username col-12 px-2">Username</p>
+            <p class="users__phone col-12 px-2">+998 912345678</p>
+            <a class="users__email text-decoration-none text-success col-12 px-2" href="mailto: abc@example.com">youremail@gmail.com</a>
+            <a class="users__website text-decoration-none text-success col-12 mb-2 px-2" href="#">Website</a>
+            
+            <a
+            class="users__address-link text-decoration-none col-11 d-flex flex-wrap mt-2 border border-1 border-white p-2 shadow mb-3 bg-body rounded" 
+            href="https://www.google.com/maps/place/-37.3159,81.1496" >
+            <p class="users__street col-12">Street, apartment #</p>
+            <p class="users__city col-6">City</p>
+            <p class="users__zipcode">zipcode</p>
+            </a>
+            
+            <div class="users__company col-11 mt-2 border border-1 border-white p-2 shadow mb-3 bg-body rounded">
+                <h6 class="company__name col-8 mx-auto text-center">Company name</h6>
+                <p class="company__phrase">Catch phase</p>
+                <p class="company__bs">bs</p>
+            </div>
+        </li>
+    </template>
+
+    <template id="posts__template">
+        <li class="posts__item d-flex flex-wrap border border-3 border-top-0 mb-5 rounded-3 justify-content-center py-2 px-2 mx-2 my-3">
+            <p class="posts__userid-paragraph col-8 text-primary px-1 py-1 me-auto">User id: 1</p>
+            <p class="posts__id-paragraph col-3 text-primary px-1 py-1 ms-auto">Post:1</p>
+            <h2 class="posts__title text-center text-dark text-truncate">Posts Title</h2>
+            <p class="posts__paragraph text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quae assumenda incidunt eligendi vitae repellat harum excepturi placeat ducimus animi?</p>
+        </li>
+    </template>
+
+    <template id="comments__template">
+        <li class="posts__item d-flex flex-wrap justify-content-center border border-top-0 border-3 rounded-3 py-2 px-2 mx-2 my-3">
+            <p class="comments__postsid-paragraph col-7 text-primary px-2 py-1 me-auto">Posts id: 1</p>
+            <p class="comments__id-paragraph col-4 text-primary  px-2 py-1">Comment:1</p>
+            <h2 class="comments__title text-center text-truncate text-dark">Comments Title</h2>
+            <a class="comments__email col-12 mb-2 text-decoration-underline text-success" href="mailto: abc@example.com">youremail@gmail.com</a>
+            <p class="comments__paragraph text-muted text-transform">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus praesentium delectus quae pariatur temporibus autem sit vero voluptatum commodi consequatur?</p>
+        </li>
+    </template>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
